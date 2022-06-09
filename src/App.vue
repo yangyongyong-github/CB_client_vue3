@@ -1,30 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app-container">
+    <nav>
+      <TopBanner />
+    </nav>
+    <div class="main">
+      <RouterView />
+    </div>
+    <!-- <footer></footer> -->
   </div>
-  <router-view/>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script setup>
+import TopBanner from "@/components/content/TopBanner";
+</script>
 
-#nav {
-  padding: 30px;
-}
+<style lang="scss">
+// @import url("./styles/_var.scss");
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+$base-container-width: 1200px;
+#app-container {
+  width: $base-container-width;
+  margin: 0 auto;
+  border: 1px solid sienna;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</style>>
